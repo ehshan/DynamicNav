@@ -85,3 +85,14 @@ function makeOption(type,attr,text){
     return e;
 
 }
+
+/**
+ * Adds a function to an element
+ * @param id
+ * @param event
+ * @param functionName
+ */
+function addElementFunction(id, event, functionName){
+    var select = document.getElementById(id);
+    select.setAttribute(event, functionName+"(event)");
+}
