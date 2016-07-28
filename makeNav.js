@@ -71,3 +71,17 @@ function makeElement(type,id,name){
     e.name = name;
     return e;
 }
+
+/**
+ * Creates an Option Element
+ * @param type
+ * @param attr
+ * @param text
+ */
+function makeOption(type,attr,text){
+    var e = document.createElement(type);
+    e.setAttribute(attr,attr);
+    e.innerHTML = text;
+    return e;
+
+}
