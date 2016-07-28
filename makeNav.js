@@ -57,3 +57,17 @@ var listData = [
 ];
 
 
+
+/**
+ * Creates a document element
+ * @param type
+ * @param id
+ * @param name
+ * @returns {Element}
+ */
+function makeElement(type,id,name){
+    var e = document.createElement(type);
+    e.id = id;
+    e.name = name;
+    return e;
+}
