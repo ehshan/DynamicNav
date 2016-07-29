@@ -56,7 +56,21 @@ var listData = [
     }
 ];
 
-
+/**
+ * Creates create an un-ordered list element for document
+ * @param listID
+ */
+function makeList(listID){
+    var body = document.getElementsByTagName('body')[0];
+    var wrapper = makeElement("div","wrapper");
+    var list = makeElement("ul",listID);
+    var selectBox = makeElement("select","categories","select");
+    var option = makeOption("option","hidden","Filter by Category");
+    wrapper.appendChild(list);
+    body.appendChild(wrapper);
+    list.appendChild(selectBox);
+    selectBox.appendChild(option);
+}
 
 /**
  * Creates a document element
