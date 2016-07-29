@@ -123,3 +123,13 @@ function makeNav(list) {
 
     });
 }
+
+/**
+ * Removes all children from an element
+ * @param e
+ */
+function removeOptions(e) {
+    while(e.childNodes.length >2){
+        e.removeChild(e.lastChild)
+    }
+}
