@@ -167,6 +167,8 @@ function changeCategory(event) {
  */
 function run(list){
     makeList("list1");
+    addElementFunction("categories","onchange","changeCategory");
+    makeNav(list);
 }
 
 window.onload(run(listData));
