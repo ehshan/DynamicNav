@@ -96,3 +96,17 @@ function addElementFunction(id, event, functionName){
     var select = document.getElementById(id);
     select.setAttribute(event, functionName+"(event)");
 }
+
+/**
+ *
+ * @param list
+ * @param classname
+ * @param title
+ * @param link
+ */
+function makeListElement(list,classname, title, link){
+    var li = document.createElement("li");
+    li.className= classname;
+    li.innerHTML = "<a href ="+link+">"+title+"<span>></span>"+"<a>";
+    document.getElementById(list).appendChild(li);
+}
