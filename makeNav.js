@@ -160,3 +160,11 @@ function changeCategory(event) {
         }
     });
 }
+
+/**
+ * Runs all functions
+ * @param list
+ */
+function run(list){
+    makeList("list1");
+}
