@@ -110,3 +110,16 @@ function makeListElement(list,classname, title, link){
     li.innerHTML = "<a href ="+link+">"+title+"<span>></span>"+"<a>";
     document.getElementById(list).appendChild(li);
 }
+
+/**
+ * Builds a navigation box from a array object
+ * @param list
+ */
+function makeNav(list) {
+    list.forEach(function (item) {
+        if (item.category == list[0].category) {
+            makeListElement("list1", "child", item.title, item.url.toString());
+        }
+
+    });
+}
