@@ -202,6 +202,7 @@ function run(list){
     makeList("list1");
     addElementFunction("categories","onchange","changeCategory");
     makeNav(list);
+    makeSelectBox("categories",list);
 }
 
 window.onload(run(listData));
