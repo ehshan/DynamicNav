@@ -178,6 +178,23 @@ Array.prototype.contains = function (obj) {
 };
 
 /**
+ * Creates select element from array
+ * @param element
+ * @param list
+ */
+function makeSelectBox(element, list){
+    var mySelect = document.getElementById(element);
+    var categories = [];
+    list.forEach(function (item) {
+        if (!categories.contains(item.category)) {
+            mySelect.options[mySelect.options.length] = new Option(item.category, item.category);
+            categories.push(item.category);
+        }
+    });
+
+}
+
+/**
  * Runs all functions
  * @param list
  */
