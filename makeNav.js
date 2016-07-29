@@ -133,3 +133,16 @@ function removeOptions(e) {
         e.removeChild(e.lastChild)
     }
 }
+
+/**
+ * Changes the navigation depending on option selected
+ * @param event
+ */
+function changeCategory(event) {
+    removeOptions(document.getElementById("list1"));
+    listData.forEach(function (item) {
+        if (item.category == event.target.value) {
+            makeListElement("list1","child",item.title,item.url.toString());
+        }
+    });
+}
