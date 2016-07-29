@@ -168,3 +168,5 @@ function changeCategory(event) {
 function run(list){
     makeList("list1");
 }
+
+window.onload(run(listData));
